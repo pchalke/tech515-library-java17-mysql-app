@@ -17,7 +17,7 @@
   - [Dockerfile — Node.js v20 (template)](#dockerfile--nodejs-v20-template)
   - [Short notes / gotchas](#short-notes--gotchas)
   - [Task: Run and pull your first image — step-by-step (what to do and what to expect)](#task-run-and-pull-your-first-image--step-by-step-what-to-do-and-what-to-expect)
-  - [What I (you) should have learned by completing this task](#what-i-you-should-have-learned-by-completing-this-task)
+  - [What I have learned by completing this task:](#what-i-have-learned-by-completing-this-task)
 
 
 Overview:
@@ -169,7 +169,7 @@ Security & hardening notes
 - Use user namespaces and read-only root filesystems when possible.
 - Use image signing and scanning (Docker Content Trust, Clair, Trivy).
 
-Success story (concise)
+Success stories:
 - Many organizations (e.g., PayPal, Spotify, ADP) used Docker to dramatically speed up developer workflows and increase deployment frequency. For example, companies reported faster onboarding and consistent environments between developer machines and production, reducing the infamous "works on my machine" problem. (Look up Docker case studies on the Docker website for vendor-published details.)
 
 
@@ -286,7 +286,7 @@ docker container prune
 docker run --name my-nginx -p 8080:80 -d nginx
 ```
 
-1. Access the container’s shell:
+2. Access the container’s shell:
 
 ```
 docker exec -it my-nginx /bin/bash
@@ -418,19 +418,19 @@ docker ps
 
  
 ## Automate Docker Image Creation Using a Dockerfile
-Objective
+Objective:
 Use a Dockerfile to ensure consistent, repeatable image creation without manual container changes.
 How Automation Works
 
 Dockerfile defines:
 
-Base image
+* Base image
 
-Files to include
+* Files to include
 
-Runtime configuration
+* Runtime configuration
 
-Image can be rebuilt at any time using a single command
+* Image can be rebuilt at any time using a single command
 
 
 Dockerfile Breakdown:
@@ -460,17 +460,19 @@ Copies files automatically
 
 Produces a reusable image
 
- * Benefits for the Sparta Project
 
-1. No manual configuration inside containers
 
-2. Version-controlled deployment process
+* Benefits for the Sparta Project
 
-3. Same approach will be used for:
+  1. No manual configuration inside containers
 
-* Node.js v20 app
+  2. Version-controlled deployment process
 
-* MongoDB database
+  3. Same approach will be used for:
+
+    * Node.js v20 app
+
+    * MongoDB database
 
 Essential for AWS deployment and CI/CD pipelines
 ## Dockerfile — Node.js v20 (template)
@@ -598,7 +600,7 @@ docker rmi hello-world:latest
 
 ---
 
-##  What I (you) should have learned by completing this task
+##  What I have learned by completing this task:
 
 - The conceptual difference between VMs and containers and when to use each.
 - What a container image includes vs what a VM includes.
