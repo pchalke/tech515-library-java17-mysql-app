@@ -315,6 +315,7 @@ exit
 
 ```
 6. Refresh browser: http://localhost:8080 → should show your new page.
+7. ![Modified-nginx-page](<Screenshot 2026-01-30 at 13.21.22.png>)
   
 
 ##  Run different container on different port
